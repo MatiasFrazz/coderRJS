@@ -3,7 +3,7 @@
 }
 
 .App-logo {
-  height: 40vmin;
+  height: 45vmin;
   pointer-events: none;
 }
 
@@ -35,4 +35,35 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.navbarContainer{
+background-color: rgb(81, 81, 81);
+}
+
+.navLogo{
+  height: 10vmin;
+}
+
+.navSearch{
+display: flex;
+flex-wrap: wrap;
+flex-direction: row;
+align-items: center;
+justify-content: space-evenly;
+
+font-size: medium;
+font-weight: 650;
+font-variant: small-caps;
+
+color: black;
+}
+
+ul li{
+  background-color: white;
+  border: solid white 10px;
+  border-radius: 50px;
+
+  list-style-type: none;
+  text-decoration: none;
 }
