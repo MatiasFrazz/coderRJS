@@ -1,4 +1,5 @@
 import logo from '../../src/logo.svg'
+import CartWidget from './CartWidget/CartWidget'
 
 const NavBar = () => {
     return( 
@@ -7,17 +8,11 @@ const NavBar = () => {
             
             <div>
                 <img src={logo} className="navLogo" alt="logo" />
-           </div>
-
-            <ul>
-                <li className='navInicio'>
-                    <a href='../src/App.js'>Inicio</a>
-                </li>
-            </ul>
+        </div>
 
             <ul>
                 <li>
-                    <a href='../src/App.js'>Portfolio</a>
+                    <a href='../src/App.js'>Inicio</a>
                 </li>
             </ul>
 
@@ -28,18 +23,31 @@ const NavBar = () => {
             </ul> 
 
             <ul>   
-                <li className='navInicio'>
+                <li>
                     <a href='../src/App.js'>Envio</a> 
                 </li>
             </ul>  
 
             <ul>
-                <li className='navInicio'>
+                <li>
+                    <a href='../src/App.js'>Sobre Nosotros</a>
+                </li>
+            </ul>
+
+            <ul>
+                <li>
                     <a href='../src/App.js'>Login</a> 
                 </li>
             </ul>
-         
-         </div>
+            
+            <ul>
+                <li> 
+                    <a href='../src/App.js'>
+                        <CartWidget/>
+                    </a>
+                </li>
+            </ul>
+        </div>
     </div>
     )
 }  
