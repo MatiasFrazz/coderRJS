@@ -39,6 +39,10 @@
 
 		/* NAVBAR.JS */
 
+a{
+  text-decoration: none;
+}
+
 .navbarContainer{
 	background-color: rgb(81, 81, 81);
 }
@@ -65,13 +69,26 @@ ul li{
 	border: solid white 10px;
 	border-radius: 50px;
 
-	list-style-type: none;
-	text-decoration: none;
+  list-style-type: none;
+  }
+ 
+  /* ItemListContainer */
+
+.Carrito{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+
+  background-color: rgba(81, 81, 81, 0.906);
 }
 
-	/* CartWidget */
+  /* BUTTON STOCK */
 
-  /* btnStock */
+  .contador{
+    color: white;
+  }
+
+
 button{
   background-color: rgba(60, 255, 60, 0.575);
   
@@ -85,6 +102,18 @@ button{
   font-style: oblique;
 }
 
+.btnStock{
+  align-items: center;
+  padding: 1px 0 1px ;
+}
+
+
+  /* BUTTON CART */
+
 .btnCart:hover{
   box-shadow: 4px 2px 4px 2px;
+}
+
+.btnCart{
+  padding: 5px;
 }
