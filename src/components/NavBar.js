@@ -1,5 +1,7 @@
 import logo from '../../src/logo.svg'
 import CartWidget from './CartWidget/CartWidget'
+import { NavLink } from 'react-router-dom'
+import App from '../App'
 
 const NavBar = () => {
     return( 
@@ -12,41 +14,42 @@ const NavBar = () => {
 
             <ul>
                 <li>
-                    <a href='../src/App.js'>Inicio</a>
+                    <NavLink to={App.js}>  Inicio</NavLink>
                 </li>
             </ul>
 
             <ul>
                 <li>
-                    <a href='../src/App.js'>Productos</a>
+                    <NavLink to={"productos"}> Productos</NavLink>
                 </li>
             </ul> 
 
             <ul>   
                 <li>
-                    <a href='../src/App.js'>Envio</a> 
+                    <NavLink to={"detalle"}> Envio</NavLink> 
                 </li>
             </ul>  
 
             <ul>
                 <li>
-                    <a href='../src/App.js'>Sobre Nosotros</a>
+                    <NavLink to={App.js}> Sobre Nosotros</NavLink>
+                </li>
+            </ul>
+
+            <ul>
+                <li> 
+                    <NavLink to={App.js}> 
+                        <CartWidget/>
+                    </NavLink>
                 </li>
             </ul>
 
             <ul>
                 <li>
-                    <a href='../src/App.js'>Login</a> 
+                    <NavLink to={CartWidget}> Login</NavLink> 
                 </li>
             </ul>
             
-            <ul>
-                <li> 
-                    <a href='../src/App.js'>
-                        <CartWidget/>
-                    </a>
-                </li>
-            </ul>
         </div>
     </div>
     )

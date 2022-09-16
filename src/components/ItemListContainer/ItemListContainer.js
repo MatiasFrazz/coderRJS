@@ -2,7 +2,6 @@ import React from 'react';
 import Title from '../Tittle/Tittle';
 import BtnStock from '../ItemCount/BtnStock';
 import data from "../mockData";
-// import Item from '../Item/item'
 import ItemList from '../ItemList/ItemList';
 
 import { useEffect, useState } from 'react';
