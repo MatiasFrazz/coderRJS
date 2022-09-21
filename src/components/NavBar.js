@@ -1,7 +1,6 @@
 import logo from '../../src/logo.svg'
 import CartWidget from './CartWidget/CartWidget'
 import { NavLink } from 'react-router-dom'
-import App from '../App'
 
 const NavBar = () => {
     return( 
@@ -14,7 +13,7 @@ const NavBar = () => {
 
             <ul>
                 <li>
-                    <NavLink to={App.js}>  Inicio</NavLink>
+                    <NavLink to={"App.js"}>  Inicio</NavLink>
                 </li>
             </ul>
 
@@ -26,19 +25,19 @@ const NavBar = () => {
 
             <ul>   
                 <li>
-                    <NavLink to={"detalle"}> Envio</NavLink> 
+                    <NavLink to={"Detalle"}> Detalle </NavLink> 
                 </li>
             </ul>  
 
             <ul>
                 <li>
-                    <NavLink to={App.js}> Sobre Nosotros</NavLink>
+                    <NavLink to={"App.js"}> Sobre Nosotros</NavLink>
                 </li>
             </ul>
 
             <ul>
                 <li> 
-                    <NavLink to={App.js}> 
+                    <NavLink to={"/cart"}> 
                         <CartWidget/>
                     </NavLink>
                 </li>

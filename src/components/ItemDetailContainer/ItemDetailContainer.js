@@ -1,24 +1,33 @@
-import React from 'react'
 import { useEffect, useState } from 'react';
+import { useParams } from "react-router-dom"
 import ItemDetail from '../ItemDetail/ItemDetail'
-
-
-const product = {id : 4, image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTEn1YZsmJqjsiT4YFQhQZNLMvbwPBH1oeyEg&usqp=CAU", tittle: 'Televisor 60" Pulgadas', price:2650}
+import productsList from "../mockData";
 
 const ItemDetailContainer = () => {
-    const [data, setData] = useState({});
+  const [data, setData] = useState([]);
+  const {id} = useParams()
 
-    useEffect(()=>{
-        const getData = new Promise (resolve =>{
-            setTimeout(()=>{
-                resolve(product);
-            }, 3000);
-        });
-        getData.then(res=> setData(res));
-    }, [])
+  const getData = new Promise (resolve =>{
 
-  return (
-    < ItemDetail data={data} />
+    setTimeout(()=>{
+        resolve(productsList);
+    }, 20000);
+}, []);
+
+
+  useEffect(()=>{
+      getData.then(res=> {
+        const productoBuscado = res.find(p => p.id === id)
+        setData(productoBuscado) 
+      });
+  },);
+
+
+
+return (
+  <div>
+  < ItemDetail data={data} />
+  </div>
   )
 }
 

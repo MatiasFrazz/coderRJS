@@ -1,7 +1,16 @@
-import React from 'react'
+import React, {useState} from 'react'
+import { Link } from 'react-router-dom';
+import BtnStock from '../ItemCount/BtnStock';
+
+
 
 
 const ItemDetail = ({data}) => {
+  const [irAlCarrito, verElCarrito] = useState(false)
+
+  const onAdd = (Cantidad) => {
+    verElCarrito(true);
+  }
   return (
     <div className='container'>
         <h3>Detalle del Producto</h3>
@@ -10,6 +19,15 @@ const ItemDetail = ({data}) => {
             <div>
                 <h3 className='itmDetailTittle'>{data.tittle}</h3>
                     <h4>{data.price}</h4> 
+                    {
+                      irAlCarrito
+                      ? <Link to={"/cart"}>
+                        Completar Compra
+                      </Link>
+                      : <BtnStock initial={1} stock={10} onAdd={onAdd}/>
+                    }
+            
+
             </div>
         </div>
     </div>
