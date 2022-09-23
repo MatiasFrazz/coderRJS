@@ -45,7 +45,7 @@ const NavBar = () => {
 
             <ul>
                 <li>
-                    <NavLink to={CartWidget}> Login</NavLink> 
+                    <NavLink to={"App.js"}> Login</NavLink> 
                 </li>
             </ul>
             

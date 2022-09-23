@@ -7,12 +7,13 @@ function ItemList({ productos }) {
     <div className='itemList'>
       {productos.map((data) => (
         <Link  
-          key={data.id} to={'/detalle/' + Item.id} 
+          key={data.id} to={'/detalle/' + data.id} 
           style={{textDecoration: "none" }}>
           <Item
             image={data.image} 
             title={data.title}
             price={data.price}
+            category={data.category}
             />
           </Link>    
           ))}

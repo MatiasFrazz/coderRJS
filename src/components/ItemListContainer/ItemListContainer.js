@@ -3,9 +3,10 @@ import Title from '../Tittle/Tittle';
 import data from "../mockData";
 import ItemList from '../ItemList/ItemList';
 
+
 import { useEffect, useState } from 'react';
 const ItemListContainer = () => {
-  const [listaProductos, setProducList] = useState ([]);
+  const [listaProductos, setProducList] = useState ();
 
   useEffect(() => {
     verProducto.then((response) => {
